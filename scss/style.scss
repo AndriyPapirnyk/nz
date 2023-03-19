@@ -16,8 +16,15 @@ $widthContainer: 1200px;
         border: 1px solid #000;
         @include center();
         flex-direction: column;
+        gap: 10px;
     }
 }
+
+
+
+
+/////
+
 .signUp{
     width: 100%;
     height: 100vh;
@@ -34,6 +41,4 @@ $widthContainer: 1200px;
         flex-direction: column;
     }
 }
-body{
-    background-color: red;
-}
+
