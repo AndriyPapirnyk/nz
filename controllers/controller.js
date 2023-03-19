@@ -8,6 +8,11 @@ const getStudent = (req, res) => {
     })
 }
 
+const Static = (req, res) => {
+  // res.sendFile('/Users/zenoxx/Desktop/nz/nz/index.html');
+}
+
 module.exports = {
     getStudent,
+    Static
 };
