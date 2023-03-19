@@ -9,8 +9,9 @@ const app = express();
 const bodyParser = require('body-parser')
 
 app.use(express.static(__dirname + '/public'));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(DBroutes)
+app.use(DBroutes);
 
 async function connect() {
     try {
@@ -22,21 +23,6 @@ async function connect() {
 }
 
 connect();
-
-app.post('/signUp', (req, res) => {
-   let student = {
-    name:req.body.name,
-    surname:req.body.surname,
-    class:req.body.class,
-    age:req.body.age,
-    password:req.body.password
-   }
-   
-   console.log(student)
-});
-
- 
-app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/signup', (req,res) => {
     res.sendFile(__dirname + '/signUP.html')
