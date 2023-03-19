@@ -2,8 +2,8 @@
     {
         "name": "Andriy",
         "surname": "Papirnyk",
-        "age": "15",
-        "avarageScore": "10.2",
+        "age": 15,
+        "avarageScore": 10.2,
         "class": "6b",
         "subjects": {
             "math": [10,9,10],
