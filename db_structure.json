@@ -4,6 +4,7 @@
         "surname": "Papirnyk",
         "age": "15",
         "avarageScore": "10.2",
+        "class": "6b",
         "subjects": {
             "math": [10,9,10],
             "ukrainian": [11,8,10],
