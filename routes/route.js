@@ -3,7 +3,6 @@ const Student = require('../models/student-model');
 
 const {
     getStudent,
-    Static
 } = require('../controllers/controller')
 
 const router = express.Router();

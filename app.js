@@ -23,6 +23,10 @@ async function connect() {
 
 connect();
 
+app.get('/', (req,res) => {
+    res.sendFile(__dirname + '/index.html')
+})
+
 app.listen(PORT, () => {
     console.log(`Server works on port: ${PORT}`)
 })
