@@ -1,3 +1,4 @@
+
 $widthContainer: 1200px;
 @mixin center {
     display: flex;
@@ -42,4 +43,13 @@ $widthContainer: 1200px;
     }
 }
 
+    &__form{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 1200px;
+        height: 1200px;
+        flex-direction: column;
+    }
+}
 
