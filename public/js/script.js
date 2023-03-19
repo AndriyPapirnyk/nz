@@ -7,6 +7,7 @@ $('#SignUp__sumbitBtn').click(function(){
         password:signUp__inpPassword.value
     };
     sendPurchaseData(data);
+    window.location = "http://localhost:3000/signUp";
 })
 
 

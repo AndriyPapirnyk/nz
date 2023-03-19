@@ -7,7 +7,8 @@ const PORT = 3000;
 const url = `mongodb+srv://andriy:andriy12345@nz.beqns0u.mongodb.net/?retryWrites=true&w=majority`;
 const app = express();
 const bodyParser = require('body-parser')
-
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
@@ -23,6 +24,7 @@ async function connect() {
 }
 
 connect();
+
 
 app.get('/signup', (req,res) => {
     res.sendFile(__dirname + '/signUP.html')
