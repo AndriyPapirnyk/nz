@@ -6,7 +6,9 @@
         "avarageScore": "",
         "subjects": {
             "math": [],
-            "english":[]
+            "ukrainian": [],
+            "english":[],
+            "physics": []
         }
     }
 ]
