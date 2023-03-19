@@ -24,7 +24,7 @@ async function connect() {
 connect();
 
 app.get('/', (req,res) => {
-    res.sendFile(__dirname + '/index.html')
+    res.sendFile(__dirname + '/signUP.html')
 })
 
 app.listen(PORT, () => {
