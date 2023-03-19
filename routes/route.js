@@ -3,14 +3,12 @@ const Student = require('../models/student-model');
 
 const {
     getStudent,
-    Static
 } = require('../controllers/controller')
 
 const router = express.Router();
 
 router.get('/students', getStudent);
 
-router.get('/', Static);
 
 
 module.exports = router;
