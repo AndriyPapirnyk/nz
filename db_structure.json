@@ -1,14 +1,14 @@
 [
     {
-        "name": "",
-        "surname": "",
-        "age": "",
-        "avarageScore": "",
+        "name": "Andriy",
+        "surname": "Papirnyk",
+        "age": "15",
+        "avarageScore": "10.2",
         "subjects": {
-            "math": [],
-            "ukrainian": [],
-            "english":[],
-            "physics": []
+            "math": [10,9,10],
+            "ukrainian": [11,8,10],
+            "english":[9,10,10],
+            "physics": [12,9,9]
         }
     }
 ]
