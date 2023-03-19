@@ -4,8 +4,8 @@
         "surname": "",
         "age": "",
         "avarageScore": "",
-        "subjects": [
-            "math":
-        ]
+        "subjects": {
+            "math": []
+        }
     }
 ]
