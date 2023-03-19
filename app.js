@@ -6,7 +6,7 @@ require('dotenv').config();
 const PORT = 3000;
 const url = `mongodb+srv://andriy:andriy12345@nz.beqns0u.mongodb.net/?retryWrites=true&w=majority`;
 const app = express();
-
+const bodyParser = require('body-parser')
 
 app.use(express.static(__dirname + '/public'));
 app.use(express.json());
@@ -22,6 +22,21 @@ async function connect() {
 }
 
 connect();
+
+app.post('/signUp', (req, res) => {
+   let student = {
+    name:req.body.name,
+    surname:req.body.surname,
+    class:req.body.class,
+    age:req.body.age,
+    password:req.body.password
+   }
+   
+   console.log(student)
+});
+
+ 
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/signup', (req,res) => {
     res.sendFile(__dirname + '/signUP.html')

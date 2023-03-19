@@ -41,5 +41,13 @@ $widthContainer: 1200px;
         justify-content: center;
         flex-direction: column;
     }
+    &__form{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 1200px;
+        height: 1200px;
+        flex-direction: column;
+    }
 }
 

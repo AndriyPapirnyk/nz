@@ -4,20 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/null.css">
     <title>NZ</title>
 </head>
 <body>
     <div class="signUp">
         <div class="signUp__container">
+            <form action="post" class="SignUp__form" id="SignUp__form">
             <h1>Sign Up</h1>
-            <input type="text" placeholder="Name">
-            <input type="text" placeholder="Surname">
-            <input type="text" placeholder="Class">
-            <input type="text" placeholder="Password">
-            <input type="text" placeholder="Age">
-            <input type="text" placeholder="Name">
-            <button>Sumbit</button>
+            <input type="text" id="signUp__inpName" name="signUp__inpName" placeholder="Name">
+            <input type="text" id="signUp__inpSurname" name="signUp__inpSurname" placeholder="Surname">
+            <input type="text" id="signUp__inpClass" name="signUp__inpClass" placeholder="Class">
+            <input type="text" id="signUp__inpPassword" name="signUp__inpPassword" placeholder="Password">
+            <input type="text" id="signUp__inpAge" name="signUp__inpAge" placeholder="Age">
+            <button id="SignUp__sumbitBtn">Sumbit</button>
+            </form>
         </div>
        </div>
        <script src="js/script.js"></script>
