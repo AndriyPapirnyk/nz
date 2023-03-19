@@ -7,7 +7,7 @@ const PORT = 3000;
 const url = `mongodb+srv://andriy:andriy12345@nz.beqns0u.mongodb.net/?retryWrites=true&w=majority`;
 const app = express();
 
-app.use(express.static(__dirname + '/public'));
+
 
 app.use(express.json());
 app.use(DBroutes)
