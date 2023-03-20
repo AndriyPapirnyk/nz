@@ -3,7 +3,8 @@ const Student = require('../models/student-model');
 
 const {
     getStudent,
-    signUp
+    signUp,
+    logIn
 } = require('../controllers/controller')
 
 const router = express.Router();
@@ -11,6 +12,9 @@ const router = express.Router();
 router.get('/students', getStudent);
 
 router.post('/signUp', signUp);
+
+router.post('/login', logIn);
+
 
 
 

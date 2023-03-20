@@ -26,8 +26,24 @@ const signUp = (req, res) => {
 }
 
 
+const logIn = (req, res) => {
+  let studentData = {
+    name:req.body.name,
+    surname:req.body.surname,
+    password:req.body.password
+   }
+   console.log(studentData)
+   Student
+   .findOne(studentData)
+   .then((result) => {
+    console.log(result)
+  })
+}
+
+
 
 module.exports = {
     getStudent,
-    signUp
+    signUp,
+    logIn
 };
