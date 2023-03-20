@@ -26,18 +26,20 @@ const signUp = (req, res) => {
 }
 
 
-const logIn = (req, res) => {
+const logIn = async (req, res) => {
   let studentData = {
     name:req.body.name,
     surname:req.body.surname,
     password:req.body.password
    }
    console.log(studentData)
-   Student
-   .findOne(studentData)
-   .then((result) => {
-    console.log(result)
-  })
+   let studentValidate = await Student.findOne(studentData)
+   console.log(studentValidate)
+   if (studentValidate) {
+    res.sendStatus(200);
+  } else {
+    res.sendStatus(404);
+  }
 }
 
 
