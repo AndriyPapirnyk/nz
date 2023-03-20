@@ -1,4 +1,3 @@
-
 $widthContainer: 1200px;
 @mixin center {
     display: flex;
@@ -30,24 +29,19 @@ $widthContainer: 1200px;
     width: 100%;
     height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
     &__container{
-        width: 1200px;
-        height: 1200px;
-        display: flex;
-        
-        align-items: center;
-        justify-content: center;
+        width: $widthContainer;
+        height: 100%;
+        border: 1px solid #000;
+        @include center();
         flex-direction: column;
+        gap: 10px;
     }
-    &__form{
+    form{
         display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 1200px;
-        height: 1200px;
         flex-direction: column;
+        gap: 10px;
     }
 }
 

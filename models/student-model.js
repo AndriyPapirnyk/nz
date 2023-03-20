@@ -6,7 +6,6 @@ const studentSchema = new Schema({
     name: String,
     surname: String,
     age: Number,
-    avarageScore: Number,
     class: String,
     password: String,
     subjects: {
@@ -26,7 +25,7 @@ const studentSchema = new Schema({
             type: [Number],
             default: [],
         },
-    },
+    }
 })
 
 const Student = mongoose.model('Student', studentSchema);
