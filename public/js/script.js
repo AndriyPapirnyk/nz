@@ -22,28 +22,9 @@ $('#SignUp__sumbitBtn').click(function(){
         age:signUp__inpAge.value,
         password:signUp__inpPassword.value
     };
-    sendPurchaseData(data);
+    sendData(data, 'SignUp__form', 'POST', 'signUp');
     window.location = "http://localhost:3000/signUp";
 })
-
-
-
-
-function sendPurchaseData(formData) {
-    const form = document.getElementById('SignUp__form');
-    fetch('signUp', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData)
-    })
-    .then(_=>{
-        form.reset();
-    })
-    .catch(error => console.log(error))
-}
-
 
 
 $('#Login__button').click(function(){
@@ -52,21 +33,7 @@ $('#Login__button').click(function(){
         surname:signUp__inpSurname.value,
         password:signUp__inpPassword.value
     };
-    sendPurchaseData(data);
+    sendData(data, 'SignUp__form', 'POST', 'login');
 })
 
 
-function sendPurchaseData(formData) {
-    const form = document.getElementById('SignUp__form');
-    fetch('signUp', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData)
-    })
-    .then(_=>{
-        form.reset();
-    })
-    .catch(error => console.log(error))
-}
