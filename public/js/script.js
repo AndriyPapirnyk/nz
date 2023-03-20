@@ -13,6 +13,25 @@ function sendData(formData, formId, method, methodName) {
     .catch(error => console.log(error))
 }
 
+function sendAndValidateData(formData, formId, method, methodName) {
+    const form = document.getElementById(`${formId}`);
+    fetch(`${methodName}`, {
+        method: `${method}`,
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => {
+        if (response.ok) {
+            alert('User found')
+        } else {
+            alert('Data not found');
+        }
+    })
+    .catch(error => console.log(error))
+}
+
 
 $('#SignUp__sumbitBtn').click(function(){
     let data = {
@@ -37,8 +56,7 @@ $('#Login__button').click(function(){
         password:login__password.value
     };
     if(login__name.value.trim() != '' && login__surname.value.trim() != '' && login__password.value.trim() != ''){
-        sendData(data, 'login__form', 'POST', 'login');
-        alert('Ok');
+        sendAndValidateData(data, 'login__form', 'POST', 'login');
     }else{
         alert('Please fill in all fields');
     }
