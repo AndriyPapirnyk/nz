@@ -34,6 +34,10 @@ app.get('/login', (req,res) => {
     res.sendFile(__dirname + '/index.html')
 })
 
+app.get('/start', (req,res) => {
+    res.sendFile(__dirname + '/startPage.html')
+})
+
 app.listen(PORT, () => {
     console.log(`Server works on port: ${PORT}`)
 })
