@@ -34,11 +34,16 @@ $('#SignUp__sumbitBtn').click(function(){
 
 $('#Login__button').click(function(){
     let data = {
-        name:signUp__inpName.value,
-        surname:signUp__inpSurname.value,
-        password:signUp__inpPassword.value
+        name:login__name.value,
+        surname:login__surname.value,
+        password:login__password.value
     };
-    sendData(data, 'SignUp__form', 'POST', 'login');
+    if(login__name.value.trim() != '' && login__surname.value.trim() != '' && login__password.value.trim() != ''){
+        sendData(data, 'login__form', 'POST', 'login');
+        alert('Ok');
+    }else{
+        alert('Please fill in all fields');
+    }
 })
 
 
