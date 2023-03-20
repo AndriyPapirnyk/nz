@@ -24,8 +24,6 @@ $('#SignUp__sumbitBtn').click(function(){
     };
     if(signUp__inpName.value.trim() != '' && signUp__inpSurname.value.trim() != '' && signUp__inpClass.value.trim() != '' && signUp__inpAge.value.trim() != '' && signUp__inpPassword.value.trim() != ''){
         sendData(data, 'SignUp__form', 'POST', 'signUp');
-        window.location = "http://localhost:3000/signUp";    
-        alert('Ok');
     }else{
         alert('Please fill in all fields');
     }
