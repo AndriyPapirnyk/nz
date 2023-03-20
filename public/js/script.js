@@ -23,31 +23,12 @@ $('#SignUp__sumbitBtn').click(function(){
         password:signUp__inpPassword.value
     };
     if(signUp__inpName.value.trim() != '' && signUp__inpSurname.value.trim() != '' && signUp__inpClass.value.trim() != '' && signUp__inpAge.value.trim() != '' && signUp__inpPassword.value.trim() != ''){
-    sendPurchaseData(data);
+        sendData(data,SignUp__form,'POST','signUp');
     alert('Ok')
     }else{
         alert('Please fill in all fields');
     }
 })
-
-
-
-
-function sendPurchaseData(formData) {
-    const form = document.getElementById('SignUp__form');
-    fetch('signUp', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData)
-    })
-    .then(_=>{
-        form.reset();
-    })
-    .catch(error => console.log(error))
-}
-
 
 
 $('#Login__button').click(function(){
@@ -60,17 +41,3 @@ $('#Login__button').click(function(){
 })
 
 
-function sendPurchaseData(formData) {
-    const form = document.getElementById('SignUp__form');
-    fetch('signUp', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData)
-    })
-    .then(_=>{
-        form.reset();
-    })
-    .catch(error => console.log(error))
-}
