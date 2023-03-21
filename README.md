@@ -1,0 +1,1 @@
+nz project is a copy of the functionality of today's electronic magazine that is used in the education of Ukraine.  Using databases and server side, this project will bring us new experience and consolidate knowledge.
