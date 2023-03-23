@@ -6,6 +6,25 @@ $widthContainer: 1200px;
     align-items: center;
 }
 
+@mixin commonButton {
+    border: none;
+    width: 190px;
+    height: 50px;
+    background: #6864ED;
+    box-shadow: 0px 6px 26px rgba(27, 26, 26, 0.25);
+    border-radius: 8px;
+    color: #fff;
+}
+
+@mixin commonInput {
+    width: 380px;
+    height: 45px;
+    border: none;
+    background: #EFF3F9;
+    border-radius: 4px;
+    padding: 0 10px;
+}
+
 .login{
     width: 100%;
     height: 100vh;
@@ -14,7 +33,6 @@ $widthContainer: 1200px;
     &__container{
         width: $widthContainer;
         height: 100%;
-        border: 1px solid #000;
         @include center();
         flex-direction: column;
         gap: 10px;
@@ -22,7 +40,14 @@ $widthContainer: 1200px;
     form{
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 20px;
+        @include center();
+        input{
+           @include commonInput();
+        }
+        button{
+            @include commonButton();
+        }
     }
 }
 
@@ -39,7 +64,6 @@ $widthContainer: 1200px;
     &__container{
         width: $widthContainer;
         height: 100%;
-        border: 1px solid #000;
         @include center();
         flex-direction: column;
         gap: 10px;
@@ -47,7 +71,14 @@ $widthContainer: 1200px;
     form{
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 20px;
+        @include center();
+        input{
+            @include commonInput();
+        }
+        button{
+            @include commonButton();
+        }
     }
 }
 
@@ -56,22 +87,27 @@ $widthContainer: 1200px;
     width: 100%;
     height: 100vh;
     @include center();
+    background-image: url(../img/start_bg.jpg);
+    background-size: cover;
     &__container{
         width: $widthContainer;
         height: 100%;
         @include center();
-        gap: 10px;
+        flex-direction: column;
+        gap: 35px;
         a{
             text-decoration: none;
-            color: #000;
+        }
+        .row{
+            display: flex;
+            gap: 25px;
+        }
+        img{
+            width: 400px;
         }
     }
     &__btn{
-        width: 120px;
-        height: 40px;
-        border-radius: 6px;
+        @include commonButton();
         @include center();
-        border: 1px solid #000;
-        margin: 0 30px;
     }
 }

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Mulish:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic");
 .login {
   width: 100%;
   height: 100vh;
@@ -11,7 +12,6 @@
 .login__container {
   width: 1200px;
   height: 100%;
-  border: 1px solid #000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,7 +35,32 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 10px;
+  gap: 20px;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.login form input {
+  width: 380px;
+  height: 45px;
+  border: none;
+  background: #EFF3F9;
+  border-radius: 4px;
+  padding: 0 10px;
+}
+.login form button {
+  border: none;
+  width: 190px;
+  height: 50px;
+  background: #6864ED;
+  -webkit-box-shadow: 0px 6px 26px rgba(27, 26, 26, 0.25);
+          box-shadow: 0px 6px 26px rgba(27, 26, 26, 0.25);
+  border-radius: 8px;
+  color: #fff;
 }
 
 .signUp {
@@ -51,7 +76,6 @@
 .signUp__container {
   width: 1200px;
   height: 100%;
-  border: 1px solid #000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -75,7 +99,32 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 10px;
+  gap: 20px;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.signUp form input {
+  width: 380px;
+  height: 45px;
+  border: none;
+  background: #EFF3F9;
+  border-radius: 4px;
+  padding: 0 10px;
+}
+.signUp form button {
+  border: none;
+  width: 190px;
+  height: 50px;
+  background: #6864ED;
+  -webkit-box-shadow: 0px 6px 26px rgba(27, 26, 26, 0.25);
+          box-shadow: 0px 6px 26px rgba(27, 26, 26, 0.25);
+  border-radius: 8px;
+  color: #fff;
 }
 
 .startPage {
@@ -90,6 +139,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-image: url(../img/start_bg.jpg);
+  background-size: cover;
 }
 .startPage__container {
   width: 1200px;
@@ -103,16 +154,33 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 10px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 35px;
 }
 .startPage__container a {
   text-decoration: none;
-  color: #000;
+}
+.startPage__container .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 25px;
+}
+.startPage__container img {
+  width: 400px;
 }
 .startPage__btn {
-  width: 120px;
-  height: 40px;
-  border-radius: 6px;
+  border: none;
+  width: 190px;
+  height: 50px;
+  background: #6864ED;
+  -webkit-box-shadow: 0px 6px 26px rgba(27, 26, 26, 0.25);
+          box-shadow: 0px 6px 26px rgba(27, 26, 26, 0.25);
+  border-radius: 8px;
+  color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -122,6 +190,4 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1px solid #000;
-  margin: 0 30px;
 }
