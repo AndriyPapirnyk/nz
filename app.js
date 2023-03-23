@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const Student = require('./models/student-model');
 const DBroutes = require('./routes/route');
 require('dotenv').config();
+const ejs = require('ejs');
 const PORT = 3000;
 const url = `mongodb+srv://andriy:andriy12345@nz.beqns0u.mongodb.net/?retryWrites=true&w=majority`;
 const app = express();

@@ -24,7 +24,10 @@ function sendAndValidateData(formData, formId, method, methodName) {
     })
     .then(response => {
         if (response.ok) {
-            alert('User found')
+            alert('User found');
+            response.json().then(data => {
+                console.log('User data received from server:', data);
+            });
         } else {
             alert('Data not found');
         }
@@ -61,5 +64,17 @@ $('#Login__button').click(function(){
         alert('Please fill in all fields');
     }
 })
+
+
+
+fetch('/login')
+    .then(response => response.text())
+    .then(studentValidate => {
+        console.log(studentValidate)
+    })
+    .catch(error => {
+      console.error(error);
+      alert('An error occurred');
+});
 
 

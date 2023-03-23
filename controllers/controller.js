@@ -36,7 +36,9 @@ const logIn = async (req, res) => {
    let studentValidate = await Student.findOne(studentData)
    console.log(studentValidate)
    if (studentValidate) {
-    res.sendStatus(200);
+    res
+    .status(200)
+    .json(studentValidate)
   } else {
     res.sendStatus(404);
   }
