@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+
 const Student = require('./models/student-model');
 const DBroutes = require('./routes/route');
 require('dotenv').config();
@@ -36,6 +37,10 @@ app.get('/login', (req,res) => {
 
 app.get('/start', (req,res) => {
     res.sendFile(__dirname + '/startPage.html')
+})
+
+app.get('/main', (req,res) => {
+    res.sendFile(__dirname + '/main.html')
 })
 
 app.listen(PORT, () => {

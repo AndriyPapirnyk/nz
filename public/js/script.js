@@ -63,3 +63,14 @@ $('#Login__button').click(function(){
 })
 
 
+try{
+    fetch('js/student.json')
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+    console.log(data)
+    });
+}catch(e){
+    console.log(e)
+}

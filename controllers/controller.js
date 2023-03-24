@@ -1,4 +1,5 @@
 const Student = require('../models/student-model');
+const jsonFile = require('jsonfile');
 
 const getStudent = (req, res) => {
     Student
@@ -16,6 +17,15 @@ const signUp = (req, res) => {
     age:req.body.age,
     password:req.body.password
    }
+   jsonFile.writeFile('public/js/student.json', [
+    {
+      "name":studentData.name,
+      "surname":studentData.surname,
+      "class":studentData.class,
+      "age":studentData.age,
+      "password":studentData.password,
+    }
+   ])
    console.log(studentData)
    const newstudent = new Student(studentData);
    newstudent
@@ -32,9 +42,17 @@ const logIn = async (req, res) => {
     surname:req.body.surname,
     password:req.body.password
    }
-   console.log(studentData)
    let studentValidate = await Student.findOne(studentData)
    console.log(studentValidate)
+   jsonFile.writeFile('public/js/student.json', [
+    {
+      "name":studentValidate.name,
+      "surname":studentValidate.surname,
+      "class":studentValidate.class,
+      "age":studentValidate.age,
+      "password":studentValidate.password,
+    }
+   ])
    if (studentValidate) {
     res.sendStatus(200);
   } else {
