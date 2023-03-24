@@ -24,6 +24,12 @@ const signUp = (req, res) => {
       "class":studentData.class,
       "age":studentData.age,
       "password":studentData.password,
+      "subjects":{
+        "math": [],
+        "ukrainian": [],
+        "english":[],
+        "physics":[],
+      }
     }
    ])
    console.log(studentData)
