@@ -1,3 +1,4 @@
+
 function sendData(formData, formId, method, methodName) {
     const form = document.getElementById(`${formId}`);
     fetch(`${methodName}`, {
@@ -65,15 +66,28 @@ $('#Login__button').click(function(){
     }
 })
 
-
 try{
     fetch('js/student.json')
     .then((response) => {
       return response.json();
     })
     .then((data) => {
-    console.log(data)
+    markDb = data
+    function takeMarks(){
+        console.log(markDb)
+        for(let el in markDb[0].subjects){
+            // for(let marks in markDb[0].subjects)
+            $('.main__marks').append(`
+            <div class="main__marks__item" id="${el}">
+            <div>${el}</div>
+            <div>${markDb[0].subjects[el]}</div>
+            </div>
+            `)
+        }
+    }
+    takeMarks()
     });
 }catch(e){
     console.log(e)
 }
+

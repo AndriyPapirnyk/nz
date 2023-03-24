@@ -1,1 +1,1 @@
-[{"name":"Andriy","surname":"Fedets","class":"6b","age":15,"password":"12345Andriy"}]
+[{"name":"Andriy","surname":"Fedets","class":"6b","age":15,"password":"12345Andriy","subjects":{"math":[2,1,3],"ukrainian":[2,3,1],"english":[3,2,3],"physics":[1,2,3]}}]
