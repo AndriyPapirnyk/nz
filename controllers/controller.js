@@ -51,6 +51,8 @@ const logIn = async (req, res) => {
       "class":studentValidate.class,
       "age":studentValidate.age,
       "password":studentValidate.password,
+      "subjects":studentValidate.subjects,
+      
     }
    ])
    if (studentValidate) {
