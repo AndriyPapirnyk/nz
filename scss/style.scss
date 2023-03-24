@@ -111,3 +111,22 @@ $widthContainer: 1200px;
         @include center();
     }
 }
+
+
+/////
+
+
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    &__container{
+        width: $widthContainer;
+        height: 100%;
+        @include center();
+        flex-direction: column;
+        gap: 10px;
+        border: 1px solid #000;
+    }
+}
