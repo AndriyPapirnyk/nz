@@ -24,7 +24,10 @@ function sendAndValidateData(formData, formId, method, methodName) {
     })
     .then(response => {
         if (response.ok) {
-            alert('User found')
+            alert('User found');
+            response.json().then(data => {
+                console.log('User data received from server:', data);
+            });
         } else {
             alert('Data not found');
         }

@@ -54,7 +54,9 @@ const logIn = async (req, res) => {
     }
    ])
    if (studentValidate) {
-    res.sendStatus(200);
+    res
+    .status(200)
+    .json(studentValidate)
   } else {
     res.sendStatus(404);
   }
