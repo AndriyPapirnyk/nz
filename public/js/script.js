@@ -69,10 +69,17 @@ $('#Login__button').click(function validateForm(){
     let data = {
         name:login__name.value,
         surname:login__surname.value,
-        password:login__password.value
+        password:login__password.value,
+        status:loginSelect.value
     };
     if(login__name.value.trim() != '' && login__surname.value.trim() != '' && login__password.value.trim() != ''){
-        sendAndValidateData(data, 'login__form', 'POST', 'login', 'main');
+        sendAndValidateData(data, 'login__form', 'POST', 'login');
+        console.log(data.status)
+        if(data.status == 'Teacher'){
+            window.location.href = "teacher"; 
+        }else if(data.status == 'Student'){
+            window.location.href = "main";
+        }
         return false;
     }else{
         alert('Please fill in all fields');
