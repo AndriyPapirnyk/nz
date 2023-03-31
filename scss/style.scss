@@ -121,6 +121,16 @@ $widthContainer: 1200px;
     height: 100vh;
     display: flex;
     justify-content: center;
+    background-image: url(../img/start_bg.jpg);
+    background-size: cover;
+    &__header{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        border: 1px solid #000;
+    }
     &__container{
         width: $widthContainer;
         height: 100%;

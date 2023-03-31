@@ -1,6 +1,6 @@
 *,
 *::before,
-*::after {box-sizing: border-box; font-family: 'Mulish';}
+*::after {box-sizing: border-box; font-family: 'Mulish';color: #272732;}
 
 ul{list-style: none;display: flex;}
 

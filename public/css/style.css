@@ -201,6 +201,16 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-image: url(../img/start_bg.jpg);
+  background-size: cover;
+}
+.main__header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  border: 1px solid #000;
 }
 .main__container {
   width: 1200px;
