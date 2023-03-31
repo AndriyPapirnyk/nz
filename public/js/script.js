@@ -14,6 +14,10 @@ function sendData(formData, formId, method, methodName) {
     .catch(error => console.log(error))
 }
 
+$('.btnLogOut').click(function(){
+    alert('ss')
+})
+
 function sendAndValidateData(formData, formId, method, methodName) {
     const form = document.getElementById(`${formId}`);
     fetch(`${methodName}`, {

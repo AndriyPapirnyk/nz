@@ -36,7 +36,6 @@ app.get('/', (req,res) => {
     res.sendFile(__dirname + '/startPage.html')
 })
 
-
 app.get('/login', (req,res) => {
     res.sendFile(__dirname + '/index.html')
 })
