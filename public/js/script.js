@@ -73,12 +73,11 @@ $('#Login__button').click(function validateForm(){
         status:loginSelect.value
     };
     if(login__name.value.trim() != '' && login__surname.value.trim() != '' && login__password.value.trim() != ''){
-        sendAndValidateData(data, 'login__form', 'POST', 'login');
         console.log(data.status)
         if(data.status == 'Teacher'){
-            window.location.href = "teacher"; 
+            sendAndValidateData(data, 'login__form', 'POST', 'login', 'teacher');
         }else if(data.status == 'Student'){
-            window.location.href = "main";
+            sendAndValidateData(data, 'login__form', 'POST', 'login', 'main');
         }
         return false;
     }else{
