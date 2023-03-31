@@ -312,6 +312,7 @@
       -ms-flex-align: center;
           align-items: center;
   gap: 15px;
+  z-index: 3;
 }
 .main__header-container .options__holder p {
   font-size: 20px;
