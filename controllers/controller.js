@@ -48,7 +48,8 @@ const logIn = async (req, res) => {
   let studentData = {
     name:req.body.name,
     surname:req.body.surname,
-    password:req.body.password
+    password:req.body.password,
+    status:req.body.status
    }
    let studentValidate = await Student.findOne(studentData)
    console.log(studentValidate)

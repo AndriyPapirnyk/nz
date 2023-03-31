@@ -40,6 +40,10 @@ app.get('/login', (req,res) => {
     res.sendFile(__dirname + '/index.html')
 })
 
+app.get('/teacher', (req,res) => {
+    res.sendFile(__dirname + '/teacher.html')
+})
+
 app.get('/start', (req,res) => {
     res.sendFile(__dirname + '/startPage.html')
 })
