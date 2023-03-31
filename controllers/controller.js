@@ -15,7 +15,8 @@ const signUp = (req, res) => {
     surname:req.body.surname,
     class:req.body.class,
     age:req.body.age,
-    password:req.body.password
+    password:req.body.password,
+    status:req.body.status
    }
    jsonFile.writeFile('public/js/student.json', [
     {
@@ -24,6 +25,7 @@ const signUp = (req, res) => {
       "class":studentData.class,
       "age":studentData.age,
       "password":studentData.password,
+      "status":studentData.status,
       "subjects":{
         "math": [],
         "ukrainian": [],

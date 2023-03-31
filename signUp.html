@@ -13,9 +13,13 @@
     <div class="signUp">
         <div class="signUp__container">
             <h1>Sign Up</h1>
-            <form action="http://localhost:3000/main" class="SignUp__form" id="SignUp__form">
+            <form onsubmit="return validateSignUpForm()" class="SignUp__form" id="SignUp__form">
             <input type="text" id="signUp__inpName" name="signUp__inpName" placeholder="Name">
             <input type="text" id="signUp__inpSurname" name="signUp__inpSurname" placeholder="Surname">
+            <select name="signUpSelect" id="signUpSelect">
+                <option value="Student">Student</option>
+                <option value="Teacher">Teacher</option>
+            </select>
             <input type="text" id="signUp__inpClass" name="signUp__inpClass" placeholder="Class">
             <input type="text" id="signUp__inpPassword" name="signUp__inpPassword" placeholder="Password">
             <input type="text" id="signUp__inpAge" name="signUp__inpAge" placeholder="Age">

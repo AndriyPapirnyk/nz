@@ -1,5 +1,5 @@
 
-function sendData(formData, formId, method, methodName) {
+function sendData(formData, formId, method, methodName, location) {
     const form = document.getElementById(`${formId}`);
     fetch(`${methodName}`, {
         method: `${method}`,
@@ -10,6 +10,7 @@ function sendData(formData, formId, method, methodName) {
     })
     .then(_=>{
         form.reset();
+        window.location.href = location;
     })
     .catch(error => console.log(error))
 }
@@ -35,19 +36,32 @@ function sendAndValidateData(formData, formId, method, methodName, location) {
 }
 
 
-$('#SignUp__sumbitBtn').click(function(){
-    let data = {
-        name:signUp__inpName.value,
-        surname:signUp__inpSurname.value,
-        class:signUp__inpClass.value,
-        age:signUp__inpAge.value,
-        password:signUp__inpPassword.value
-    };
+$('#SignUp__sumbitBtn').click(function validateSignUpForm(){
+    let data = ''
+    if(signUpSelect.value == 'Student'){
+        data = {
+            name:signUp__inpName.value,
+            surname:signUp__inpSurname.value,
+            class:signUp__inpClass.value,
+            age:signUp__inpAge.value,
+            status:signUpSelect.value,
+            password:signUp__inpPassword.value
+        };
+    }else{
+        data = {
+            name:signUp__inpName.value,
+            surname:signUp__inpSurname.value,
+            status:signUpSelect.value,
+            age:signUp__inpAge.value,
+            password:signUp__inpPassword.value
+        };
+    }
     if(signUp__inpName.value.trim() != '' && signUp__inpSurname.value.trim() != '' && signUp__inpClass.value.trim() != '' && signUp__inpAge.value.trim() != '' && signUp__inpPassword.value.trim() != ''){
-        sendData(data, 'SignUp__form', 'POST', 'signUp');
+        sendData(data, 'SignUp__form', 'POST', 'signUp', 'main');
     }else{
         alert('Please fill in all fields');
     }
+    return false;
 })
 
 
