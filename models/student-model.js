@@ -8,6 +8,7 @@ const studentSchema = new Schema({
     age: Number,
     class: String,
     password: String,
+    status: String,
     subjects: {
         math: {
           type: [Number],

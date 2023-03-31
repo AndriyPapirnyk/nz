@@ -66,10 +66,10 @@ const logIn = async (req, res) => {
    if (studentValidate) {
     res
     .status(200)
-    .json(studentValidate)
+    .send('ok')
   } else {
-    res.status(404);
-    console.log(1)
+    res.status(404)
+    send('error')
   }
 }
 
