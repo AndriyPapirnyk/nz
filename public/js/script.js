@@ -14,7 +14,7 @@ function sendData(formData, formId, method, methodName) {
     .catch(error => console.log(error))
 }
 
-$('.btnLog').click(function(){
+$('.btnLogOut').click(function(){
     alert('ss')
 })
 
