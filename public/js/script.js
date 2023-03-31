@@ -1,5 +1,5 @@
 
-function sendData(formData, formId, method, methodName) {
+function sendData(formData, formId, method, methodName, location) {
     const form = document.getElementById(`${formId}`);
     fetch(`${methodName}`, {
         method: `${method}`,
@@ -10,12 +10,13 @@ function sendData(formData, formId, method, methodName) {
     })
     .then(_=>{
         form.reset();
+        window.location.href = location;
     })
     .catch(error => console.log(error))
 }
 
 
-function sendAndValidateData(formData, formId, method, methodName) {
+function sendAndValidateData(formData, formId, method, methodName, location) {
     const form = document.getElementById(`${formId}`);
     fetch(`${methodName}`, {
         method: `${method}`,
@@ -26,9 +27,7 @@ function sendAndValidateData(formData, formId, method, methodName) {
     })
     .then(response => {
         if (response.ok) {
-            response.json().then(data => {
-                console.log('User data received from server:', data);
-            });
+            window.location.href = location;
         } else {
             alert('Data not found');
         }
@@ -37,7 +36,7 @@ function sendAndValidateData(formData, formId, method, methodName) {
 }
 
 
-$('#SignUp__sumbitBtn').click(function(){
+$('#SignUp__sumbitBtn').click(function validateSignUpForm(){
     let data = ''
     if(signUpSelect.value == 'Student'){
         data = {
@@ -58,10 +57,11 @@ $('#SignUp__sumbitBtn').click(function(){
         };
     }
     if(signUp__inpName.value.trim() != '' && signUp__inpSurname.value.trim() != '' && signUp__inpClass.value.trim() != '' && signUp__inpAge.value.trim() != '' && signUp__inpPassword.value.trim() != ''){
-        sendData(data, 'SignUp__form', 'POST', 'signUp');
+        sendData(data, 'SignUp__form', 'POST', 'signUp', 'main');
     }else{
         alert('Please fill in all field');
     }
+    return false;
 })
 
 
