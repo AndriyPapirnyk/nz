@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/null.css">
     <title>NZ</title>
+    <!-- action="http://localhost:3000/main" -->
 </head>
 <body>
    <div class="login" id="login">
     <div class="login__container">
         <h1>Log in</h1>
-        <form action="http://localhost:3000/main" id="login__form">
+        <form onsubmit="return validateForm()" id="login__form">
             <input id="login__name" type="text"  placeholder="Name">
             <input id="login__surname" type="text"  placeholder="Surname">
             <input id="login__password" type="password"  placeholder="Password">

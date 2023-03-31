@@ -56,7 +56,7 @@ $('#SignUp__sumbitBtn').click(function(){
 })
 
 
-$('#Login__button').click(function(){
+$('#Login__button').click(function validateForm(){
     let data = {
         name:login__name.value,
         surname:login__surname.value,
@@ -64,8 +64,11 @@ $('#Login__button').click(function(){
     };
     if(login__name.value.trim() != '' && login__surname.value.trim() != '' && login__password.value.trim() != ''){
         sendAndValidateData(data, 'login__form', 'POST', 'login');
+        window.location.href = "main";
+        return false;
     }else{
         alert('Please fill in all fields');
+        return false;
     }
 })
 
