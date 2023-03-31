@@ -25,7 +25,6 @@ function sendAndValidateData(formData, formId, method, methodName) {
     })
     .then(response => {
         if (response.ok) {
-            alert('User found');
             response.json().then(data => {
                 console.log('User data received from server:', data);
             });
@@ -76,7 +75,6 @@ try{
     function takeMarks(){
         console.log(markDb)
         for(let el in markDb[0].subjects){
-            // for(let marks in markDb[0].subjects)
             $('.main__progress').append(`
             <div class="main__progress-item" id="${el}">
             <div>${el}</div>
@@ -84,6 +82,7 @@ try{
             </div>
             `)
         }
+        $('.main__name').text(`${markDb[0].name} ${markDb[0].surname}`)
     }
     takeMarks()
     });
