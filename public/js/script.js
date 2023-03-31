@@ -15,7 +15,7 @@ function sendData(formData, formId, method, methodName) {
 }
 
 
-function sendAndValidateData(formData, formId, method, methodName) {
+function sendAndValidateData(formData, formId, method, methodName, location) {
     const form = document.getElementById(`${formId}`);
     fetch(`${methodName}`, {
         method: `${method}`,
@@ -26,9 +26,7 @@ function sendAndValidateData(formData, formId, method, methodName) {
     })
     .then(response => {
         if (response.ok) {
-            response.json().then(data => {
-                console.log('User data received from server:', data);
-            });
+            window.location.href = location;
         } else {
             alert('Data not found');
         }
@@ -60,8 +58,7 @@ $('#Login__button').click(function validateForm(){
         password:login__password.value
     };
     if(login__name.value.trim() != '' && login__surname.value.trim() != '' && login__password.value.trim() != ''){
-        sendAndValidateData(data, 'login__form', 'POST', 'login');
-        window.location.href = "main";
+        sendAndValidateData(data, 'login__form', 'POST', 'login', 'main');
         return false;
     }else{
         alert('Please fill in all fields');

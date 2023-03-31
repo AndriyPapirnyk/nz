@@ -50,23 +50,21 @@ const logIn = async (req, res) => {
    }
    let studentValidate = await Student.findOne(studentData)
    console.log(studentValidate)
-   jsonFile.writeFile('public/js/student.json', [
-    {
-      "name":studentValidate.name,
-      "surname":studentValidate.surname,
-      "class":studentValidate.class,
-      "age":studentValidate.age,
-      "password":studentValidate.password,
-      "subjects":studentValidate.subjects,
-    }
-   ])
    if (studentValidate) {
     res
-    .status(200)
-    .send('ok')
+    .sendStatus(200);
+    jsonFile.writeFile('public/js/student.json', [
+      {
+        "name":studentValidate.name,
+        "surname":studentValidate.surname,
+        "class":studentValidate.class,
+        "age":studentValidate.age,
+        "password":studentValidate.password,
+        "subjects":studentValidate.subjects,
+      }
+     ])
   } else {
-    res.status(404)
-    send('error')
+    res.sendStatus(404);
   }
 }
 
