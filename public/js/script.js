@@ -77,8 +77,8 @@ try{
         console.log(markDb)
         for(let el in markDb[0].subjects){
             // for(let marks in markDb[0].subjects)
-            $('.main__marks').append(`
-            <div class="main__marks__item" id="${el}">
+            $('.main__progress').append(`
+            <div class="main__progress-item" id="${el}">
             <div>${el}</div>
             <div>${markDb[0].subjects[el]}</div>
             </div>
