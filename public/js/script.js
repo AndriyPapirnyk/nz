@@ -78,7 +78,7 @@ try{
         for(let el in markDb[0].subjects){
             // for(let marks in markDb[0].subjects)
             $('.main__marks').append(`
-            <div class="main__marks__item" id="${el}">
+            <div class="main__marks-item" id="${el}">
             <div>${el}</div>
             <div>${markDb[0].subjects[el]}</div>
             </div>
