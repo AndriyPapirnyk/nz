@@ -231,3 +231,8 @@ $widthContainer: 1200px;
         }
     }
 }
+
+.registrationSelect{
+    @include commonInput();
+    color: #777;
+}

@@ -388,3 +388,13 @@
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
+
+.registrationSelect {
+  width: 380px;
+  height: 45px;
+  border: none;
+  background: #EFF3F9;
+  border-radius: 4px;
+  padding: 0 10px;
+  color: #777;
+}
