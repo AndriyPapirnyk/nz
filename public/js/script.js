@@ -28,6 +28,7 @@ function sendAndValidateData(formData, formId, method, methodName, location) {
     .then(response => {
         if (response.ok) {
             window.location.href = location;
+            alert('ok')
         } else {
             alert('Data not found');
         }
@@ -57,7 +58,7 @@ $('#SignUp__sumbitBtn').click(function validateSignUpForm(){
         };
     }
     if(signUp__inpName.value.trim() != '' && signUp__inpSurname.value.trim() != '' && signUp__inpClass.value.trim() != '' && signUp__inpAge.value.trim() != '' && signUp__inpPassword.value.trim() != ''){
-        sendData(data, 'SignUp__form', 'POST', 'signUp', 'login');
+        sendAndValidateData(data, 'SignUp__form', 'POST', 'signUp', 'login');
     }else{
         alert('Please fill in all field');
     }

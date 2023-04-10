@@ -34,7 +34,8 @@ const signUp = (req, res) => {
       }
     }
    ])
-   console.log(studentData)
+   console.log(studentData);
+   res.sendStatus(200);
    const newstudent = new Student(studentData);
    newstudent
    .save()
