@@ -9,6 +9,19 @@
       -ms-flex-pack: center;
           justify-content: center;
 }
+.login .loginStar__img {
+  position: absolute;
+}
+.login .loginStar__img:nth-child(1) {
+  width: 100px;
+  margin-left: 600px;
+  margin-top: 400px;
+}
+.login .loginStar__img:nth-child(2) {
+  width: 50px;
+  margin-left: -600px;
+  margin-top: -400px;
+}
 .login__container {
   width: 1200px;
   height: 100%;
@@ -26,6 +39,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 10px;
+  position: relative;
 }
 .login form {
   display: -webkit-box;
@@ -74,6 +88,7 @@
           justify-content: center;
 }
 .signUp__container {
+  position: relative;
   width: 1200px;
   height: 100%;
   display: -webkit-box;
@@ -90,6 +105,19 @@
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 10px;
+}
+.signUp .signUpStar__img {
+  position: absolute;
+}
+.signUp .signUpStar__img:nth-child(1) {
+  width: 100px;
+  margin-left: -600px;
+  margin-top: -400px;
+}
+.signUp .signUpStar__img:nth-child(2) {
+  width: 50px;
+  margin-left: 600px;
+  margin-top: 400px;
 }
 .signUp form {
   display: -webkit-box;
@@ -141,6 +169,49 @@
           align-items: center;
   background-image: url(../img/start_bg.jpg);
   background-size: cover;
+  position: relative;
+}
+.startPage .arrow__img {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+}
+.startPage__logo {
+  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3px;
+}
+.startPage__logo img {
+  width: 55.89px;
+  height: 63.5px;
+}
+.startPage__textHolder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 40px;
+  z-index: 2;
+}
+.startPage__textHolder p {
+  font-size: 23px;
+  letter-spacing: 0.01em;
+  font-weight: 500;
+}
+.startPage__textHolder h1 {
+  font-size: 50px;
 }
 .startPage__container {
   width: 1200px;
@@ -154,11 +225,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 35px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .startPage__container a {
   text-decoration: none;
@@ -170,7 +239,7 @@
   gap: 25px;
 }
 .startPage__container img {
-  width: 400px;
+  width: 500px;
 }
 .startPage__btn {
   border: none;
@@ -203,6 +272,30 @@
           justify-content: center;
   background-image: url(../img/start_bg.jpg);
   background-size: cover;
+}
+.main__schedule {
+  width: calc(100% - 230px);
+  position: absolute;
+  right: 0;
+  height: calc(100% - 90px);
+  border-radius: 10px;
+  overflow: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid aqua;
+}
+.main__diary {
+  width: calc(100% - 230px);
+  position: absolute;
+  right: 0;
+  height: calc(100% - 90px);
+  border-radius: 10px;
+  overflow: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid red;
 }
 .main__progress {
   width: calc(100% - 230px);
@@ -245,6 +338,7 @@
   background-color: rgba(255, 255, 255, 0.4);
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  overflow: scroll;
 }
 .main__progress-item:hover {
   background: #EEEEFD;
@@ -381,6 +475,8 @@
 .main__options option:first-child {
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
+  background: #EEEEFD;
+  color: #6864ED;
 }
 .main__options option:hover {
   background: #EEEEFD;

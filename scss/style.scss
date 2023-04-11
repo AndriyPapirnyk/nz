@@ -30,12 +30,26 @@ $widthContainer: 1200px;
     height: 100vh;
     display: flex;
     justify-content: center;
+    .loginStar__img{
+        position: absolute;
+        &:nth-child(1){
+            width: 100px;
+            margin-left: 600px;
+            margin-top: 400px;
+        }
+        &:nth-child(2){
+            width: 50px;
+            margin-left: -600px;
+            margin-top: -400px;
+        }
+    }
     &__container{
         width: $widthContainer;
         height: 100%;
         @include center();
         flex-direction: column;
         gap: 10px;
+        position: relative;
     }
     form{
         display: flex;
@@ -62,11 +76,25 @@ $widthContainer: 1200px;
     display: flex;
     justify-content: center;
     &__container{
+        position: relative;
         width: $widthContainer;
         height: 100%;
         @include center();
         flex-direction: column;
         gap: 10px;
+    }
+    .signUpStar__img{
+        position: absolute;
+        &:nth-child(1){
+            width: 100px;
+            margin-left: -600px;
+            margin-top: -400px;
+        }
+        &:nth-child(2){
+            width: 50px;
+            margin-left: 600px;
+            margin-top: 400px;
+        }
     }
     form{
         display: flex;
@@ -89,12 +117,41 @@ $widthContainer: 1200px;
     @include center();
     background-image: url(../img/start_bg.jpg);
     background-size: cover;
+    position: relative;
+    .arrow__img{
+        width: 100%;
+        position: absolute;
+        left: 0;
+        z-index: 1;
+    }
+    &__logo{
+        width: 100px;
+        @include center();
+        gap: 3px;
+            img{
+                width: 55.89px;
+                height: 63.5px;
+            }
+    }
+    &__textHolder{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        z-index: 2;
+        p{
+            font-size: 23px;
+            letter-spacing: .010em;
+            font-weight: 500;
+        }
+        h1{
+            font-size: 50px;
+        }
+    }
     &__container{
         width: $widthContainer;
         height: 100%;
         @include center();
-        flex-direction: column;
-        gap: 35px;
+        justify-content: space-between;
         a{
             text-decoration: none;
         }
@@ -103,7 +160,8 @@ $widthContainer: 1200px;
             gap: 25px;
         }
         img{
-            width: 400px;
+            width: 500px;
+            // border: 1px solid #000;
         }
     }
     &__btn{
@@ -123,6 +181,26 @@ $widthContainer: 1200px;
     justify-content: center;
     background-image: url(../img/start_bg.jpg);
     background-size: cover;
+    &__schedule{
+        width: calc(100% - 230px);
+        position: absolute;
+        right: 0;
+        height: calc(100% - 90px);
+        border-radius: 10px;
+        overflow: scroll;
+        display: flex;
+        border: 1px solid aqua;
+    }
+    &__diary{
+        width: calc(100% - 230px);
+        position: absolute;
+        right: 0;
+        height: calc(100% - 90px);
+        border-radius: 10px;
+        overflow: scroll;
+        display: flex;
+        border: 1px solid red;
+    }
     &__progress{
         width: calc(100% - 230px);
         position: absolute;
@@ -131,7 +209,6 @@ $widthContainer: 1200px;
         border-radius: 10px;
         overflow: scroll;
         display: flex;
-        
         gap: 10px;
         &-item{
             border: 1px solid #fff;
@@ -146,6 +223,7 @@ $widthContainer: 1200px;
             border-radius: 10px;
             background-color: rgba($color: #fff, $alpha: .4);
             transition: 0.4s;
+            overflow: scroll;
             &:hover{
                 background: #EEEEFD;
                 color: #6864ED;
@@ -217,6 +295,8 @@ $widthContainer: 1200px;
             &:first-child{
                 border-top-right-radius: 10px;
                 border-top-left-radius: 10px;
+                background: #EEEEFD;
+                color: #6864ED;
             }
             &:hover{
                 background: #EEEEFD;
